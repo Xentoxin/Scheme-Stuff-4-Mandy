@@ -1,0 +1,24 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname GREATER_OF_TWO) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+; CartDist Distance between two points
+(define CartDist
+  (lambda (X1 Y1 X2 Y2)
+    (abs (sqrt
+          (+
+           (expt (abs (- X1 X2)) 2) (expt (abs (- Y1 Y2)) 2))))))
+
+; Arithemetic Mean
+(define ArithMean3
+  (lambda (a b c)
+    (/ (+ a b c) 3)))
+
+; Harmonic Mean: recipricoal of the arithmetic means of the recipricolas
+(define HarMean3
+  (lambda (a b c)
+    (/ 1 ( / (+ (/ 1 a) (/ 1 b) (/ 1 c)) 3))))
+
+; Greater of two
+(define MAX2
+  (lambda (a b)
+    (/ (+ (sqrt (- (+ (* a a) (* b b)) (* a b 2) )) a b) 2)))
